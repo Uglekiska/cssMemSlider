@@ -24,6 +24,7 @@ body {
 	position: relative;
 	left: 0;
 	top: 0;
+	transition: all 1s ease-in-out;
 }
 
 .pic2 {
@@ -36,6 +37,7 @@ body {
 	position: relative;
 	left: 0;
 	top: -100%;
+	transition: all 1s ease-in-out;
 }
 
 .pic3 {
@@ -48,6 +50,7 @@ body {
 	position: relative;
 	left: 0;
 	top: -200%;
+	transition: all 1s ease-in-out;
 }
 
 .pic4 {
@@ -60,6 +63,7 @@ body {
 	position: relative;
 	left: 0;
 	top: -300%;
+	transition: all 0.5s ease-in-out;
 }
 
 .slider {
@@ -76,7 +80,7 @@ body {
 	width: 100%;
 	height: 90%;
 	margin-top: 2%;
-	background: pink;
+	background: #3b3563;
 }
 
 .radios {
@@ -85,12 +89,12 @@ body {
 }
 
 .buttons {
-	width: 20%;
+	width: 10%;
 	height: 100%;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-    justify-content: space-evenly;
+	justify-content: space-evenly;
 }
 
 .text {
@@ -100,25 +104,24 @@ body {
 
 .text1 {
 	margin: 0;
-	color: white;
+	color: 	wheat;
 	font-size: 4em;
-	text-align: center;
 	width: 100%;
 	height: 100%;
 }
 
 label {
 	display: flex;
-	width: 50px;
-	height: 50px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
-	background: #3b3563;
+	background: #6A5ACD;
 	align-items: center;
 	justify-content: center;
 }
 
 .x {
-	background: wheat;
+	background: none;
 	width: 60%;
 	height: 60%;
 	border-radius: 50%;
@@ -137,16 +140,42 @@ label:hover {
 
 .radio1:checked~.pics>.pic1 {
 	opacity: 1;
+	transform: rotateY(360deg);
 }
 
 .radio2:checked~.pics>.pic2 {
 	opacity: 1;
+	transform: rotateY(360deg);
 }
 
 .radio3:checked~.pics>.pic3 {
 	opacity: 1;
+	transform: rotateY(360deg);
 }
 
 .radio4:checked~.pics>.pic4 {
 	opacity: 1;
+	transform: rotateY(360deg);
+}
+
+.radio1:checked~.bottom>.buttons>label>.x1 {
+	background-color: #3b3563;
+}
+
+.radio2:checked~.bottom>.buttons>label>.x2 {
+	background-color: #3b3563;
+}
+
+.radio3:checked~.bottom>.buttons>label>.x3 {
+	background-color: #3b3563;
+}
+
+.radio4:checked~.bottom>.buttons>label>.x4 {
+	background-color: #3b3563;
+}
+.y1:hover,
+.y2:hover,
+.y3:hover,
+.y4:hover {
+	background: wheat;
 }
